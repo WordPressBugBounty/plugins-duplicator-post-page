@@ -4,7 +4,7 @@ Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 1.2.16
+Stable tag: 1.2.17
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
