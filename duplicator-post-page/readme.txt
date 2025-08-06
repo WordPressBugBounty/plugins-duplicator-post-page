@@ -4,7 +4,7 @@ Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 1.2.18
+Stable tag: 1.2.19
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,13 +19,13 @@ Easily duplicate any post or page, including all metadata and taxonomies, with j
 Whether you're managing a blog, running a website, or developing for clients, the **Duplicator Post Page** plugin simplifies content duplication, saving you time and ensuring all relevant data is retained.
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GzBJW-NE1l8?si=eRIUUXEQajRx8XjX" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=GzBJW-NE1l8
 
 
 **Upgrade to Pro**
 Looking for advanced duplication features, additional customization options, or support? Check out the Pro version of this plugin for an enhanced experience!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ixVGJYVr3fQ?si=-_p1UGap2EeSI8eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=ixVGJYVr3fQ
 
 👉 [ Upgrade Now ](https://wp-staging.com/?ref=453)
 
