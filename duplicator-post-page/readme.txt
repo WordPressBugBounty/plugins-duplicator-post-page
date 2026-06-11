@@ -2,9 +2,9 @@
 Contributors: iqbal1hossain
 Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.2.40
+Stable tag: 1.2.41
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,26 @@ ElementsKit – All-in-One Addons for Elementor — the ultimate toolkit for Ele
 
 🎥 [Watch ElementsKit in Action](https://www.youtube.com/watch?v=NUv30rcgGws)  
 👉 [Upgrade Now](https://wpmet.com/?rui=1237)
+
+---
+
+
+== Compatibility ==
+
+**Quick Copy – Duplicate Posts & Pages** is designed to work seamlessly with most modern WordPress plugins, themes, and page builders. When duplicating content, the plugin preserves post content, custom fields, metadata, and taxonomies, helping maintain compatibility across your website.
+
+=== Popular Page Builders ===
+
+* Elementor
+* Gutenberg (Block Editor)
+* Spectra – WordPress Gutenberg Blocks
+* Essential Addons for Elementor
+* Beaver Builder
+* Divi Builder
+* WPBakery Page Builder
+* Bricks Builder
+* Oxygen Builder
+* Breakdance Builder
 
 ---
 
