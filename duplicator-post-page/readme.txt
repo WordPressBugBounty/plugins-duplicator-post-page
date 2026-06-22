@@ -4,7 +4,7 @@ Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.2.41
+Stable tag: 1.2.42
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,8 @@ ElementsKit – All-in-One Addons for Elementor — the ultimate toolkit for Ele
 * Bricks Builder
 * Oxygen Builder
 * Breakdance Builder
+* GutenKit Page Builder
+* Gutenberg Essential Blocks
 
 ---
 
