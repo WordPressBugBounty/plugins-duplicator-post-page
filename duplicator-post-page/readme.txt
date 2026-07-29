@@ -4,7 +4,7 @@ Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.2.44
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,12 @@ Yes, the duplicated post or page will retain all metadata and taxonomies associa
 ---
 
 == Changelog ==
+
+= 1.3.0 =
+* Added: WordPress Abilities API support, so AI agents can duplicate posts and pages. Registers `duplicator-post-page/duplicate-post` and `duplicator-post-page/list-duplicatable-posts` under the "Content Duplication" category. Requires WordPress 6.9 or later; earlier versions are unaffected.
+* Fixed: Custom fields holding arrays or objects were silently copied as empty values.
+* Fixed: The edit lock was copied to the duplicate, which could show a false "currently editing" warning.
+* Improved: Duplicates now also carry over the excerpt, parent, menu order, comment status and ping status.
 
 = 1.2.26 =
 * Improved: Readme optimization and better plugin discovery in WordPress search.

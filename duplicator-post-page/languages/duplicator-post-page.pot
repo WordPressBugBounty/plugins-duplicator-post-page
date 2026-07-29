@@ -1,39 +1,174 @@
-# Copyright (C) 2024 Iqbal Hossain
+# Copyright (C) 2026 Iqbal Hossain
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Duplicator Post Page - One-Click Duplicator, Page & Post Copier, Content Duplicator 1.1.4\n"
+"Project-Id-Version: Quick Copy – Duplicate Posts & Pages 1.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/duplicator-post-page\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-21T10:53:59+01:00\n"
+"POT-Creation-Date: 2026-07-29T18:44:07+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: duplicator-post-page\n"
 
-#: duplicator-post-page.php:163
+#: duplicator-post-page.php:181
 msgid "View Video Tutorials"
 msgstr ""
 
-#: duplicator-post-page.php:163
+#: duplicator-post-page.php:181
 msgid "Video Tutorials"
 msgstr ""
 
-#: includes/Hooks.php:32
-msgid "Nonce verification failed."
+#: duplicator-post-page.php:200
+msgid "Get Pro"
 msgstr ""
 
-#: includes/Hooks.php:40
+#: includes/Abilities/AbilitiesCategories.php:69
+msgid "Content Duplication"
+msgstr ""
+
+#: includes/Abilities/AbilitiesCategories.php:70
+msgid "Abilities that copy existing posts and pages into new drafts."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:50
+msgid "Duplicate Post or Page"
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:51
+msgid ""
+"Creates a copy of an existing post or page, including its content, custom "
+"fields and taxonomy terms. The copy is saved as a draft (never published) "
+"and its ID and edit URL are returned. Use the list-duplicatable-posts "
+"ability first if you only know the title and need the ID."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:59
+msgid "The ID of the post or page to duplicate."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:63
+msgid ""
+"Optional title for the copy. Defaults to the original title with \" (Copy)\" "
+"appended."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:69
+msgid "Status for the copy. Defaults to draft."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:80
+msgid "The ID of the newly created copy."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:84
+msgid "The ID of the post that was duplicated."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:88
+msgid "The title of the copy."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:92
+msgid "The post type of the copy."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:96
+msgid "The status of the copy."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:100
+msgid "Admin URL for editing the copy."
+msgstr ""
+
+#: includes/Abilities/Domain/DuplicatePost.php:134
+msgid "A post ID is required."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:49
+msgid "List Duplicatable Posts and Pages"
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:50
+msgid ""
+"Returns posts and pages the current user is allowed to duplicate, optionally "
+"filtered by a search term or post type. Use this to resolve a title into the "
+"post ID required by the duplicate-post ability."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:57
+msgid "Optional search term matched against the title and content."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:61
+msgid ""
+"Optional post type to filter by. Defaults to all duplicatable post types."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:68
+msgid "Maximum number of results to return."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:79
+msgid "The matching posts and pages."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:85
+msgid "The post ID, for use with the duplicate-post ability."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:89
+msgid "The post title."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:93
+msgid "The post type."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:97
+msgid "The post status."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:101
+msgid "Date the post was last modified, in GMT."
+msgstr ""
+
+#: includes/Abilities/Domain/ListDuplicatablePosts.php:109
+msgid "Number of posts returned."
+msgstr ""
+
+#: includes/Duplicator.php:65
+msgid "No post or page was found with the given ID."
+msgstr ""
+
+#. translators: %s: post type slug.
+#: includes/Duplicator.php:75
+msgid "The \"%s\" post type cannot be duplicated."
+msgstr ""
+
+#: includes/Duplicator.php:85 includes/Hooks.php:39
 msgid "You are not allowed to duplicate this post."
 msgstr ""
 
-#: includes/Hooks.php:92
+#: includes/Duplicator.php:95
+msgid "You are not allowed to create new content of this type."
+msgstr ""
+
+#: includes/Duplicator.php:170
+msgid "The duplicate could not be created."
+msgstr ""
+
+#: includes/Hooks.php:31
+msgid "Nonce verification failed."
+msgstr ""
+
+#: includes/Hooks.php:70
 msgid "Duplicate this"
 msgstr ""
 
-#: includes/Hooks.php:93
+#: includes/Hooks.php:71
 msgid "Duplicate"
 msgstr ""

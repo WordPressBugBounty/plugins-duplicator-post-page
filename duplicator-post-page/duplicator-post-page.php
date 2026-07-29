@@ -2,10 +2,10 @@
 
 /**
  * Plugin Name:       Quick Copy – Duplicate Posts & Pages
- * Description:       One-Click Duplicator, Page & Post Copier, Content Duplicator.
+ * Description:      One-Click Duplicator, Page & Post Copier, Content Duplicator.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           1.2.44
+ * Version:           1.3.0
  * Author:            Iqbal Hossain
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,7 +27,7 @@ final class Duplicator_Post_Page {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.2.44';
+	const VERSION = '1.3.0';
 
 	/**
 	 * Plugin instance.
@@ -107,7 +107,8 @@ final class Duplicator_Post_Page {
 	 * @since 1.0.0
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'duplicator-post-page', false, DUPLICATOR_POST_PAGE_PLUGIN_DIR . 'languages/' );
+		// The path must be relative to WP_PLUGIN_DIR; an absolute one never resolves.
+		load_plugin_textdomain( 'duplicator-post-page', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	/**
@@ -135,6 +136,15 @@ final class Duplicator_Post_Page {
 		 * @since 1.1.1
 		 */
 		new DuplicatorPostPage\Helpers\Utils();
+
+		/**
+		 * Expose the plugin's abilities to the WordPress Abilities API so that
+		 * agents can duplicate posts and pages. Inert on WordPress versions
+		 * without the Abilities API.
+		 *
+		 * @since 1.2.45
+		 */
+		DuplicatorPostPage\Abilities\AbilitiesLoader::init();
 
 		/**
 		 * Fires after the initialization of the Duplicator Post Page plugin.

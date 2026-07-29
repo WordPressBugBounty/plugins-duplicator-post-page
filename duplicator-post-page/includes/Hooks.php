@@ -1,7 +1,6 @@
 <?php
 
 namespace DuplicatorPostPage;
-use DuplicatorPostPage\Helpers\Utils as Duplicator_Post_Page_Helper;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -43,36 +42,15 @@ class Hooks {
 			$post = get_post( $post_id );
 
 			if ( $post ) {
-				$new_post = [
-					'post_title'    => Duplicator_Post_Page_Helper::recursively_slash_strings( $post->post_title . ' (Copy)' ),
-					'post_content'  => Duplicator_Post_Page_Helper::recursively_slash_strings( $post->post_content ),
-					'post_status'   => 'draft',
-					'post_type'     => $post->post_type,
-					'post_author'   => $post->post_author,
-				];
+				$new_post_id = Duplicator::duplicate( $post_id );
 
-				$new_post_id = wp_insert_post( $new_post );
-
-				if ( $new_post_id ) {
-					// Copy metadata.
-					$post_meta = get_post_meta( $post_id );
-					foreach ( $post_meta as $meta_key => $meta_values ) {
-						foreach ( $meta_values as $meta_value ) {
-							add_post_meta( $new_post_id, $meta_key, maybe_unserialize( Duplicator_Post_Page_Helper::recursively_slash_strings( $meta_value ) ) );
-						}
-					}
-
-					// Copy taxonomies.
-					$taxonomies = get_object_taxonomies( $post->post_type );
-					foreach ( $taxonomies as $taxonomy ) {
-						$terms = wp_get_object_terms( $post_id, $taxonomy, [ 'fields' => 'ids' ] );
-						wp_set_object_terms( $new_post_id, $terms, $taxonomy );
-					}
-
-					// Redirect to the edit screen for the new post/page.
-					wp_redirect( admin_url( 'edit.php?post_type=' . $post->post_type ) );
-					exit;
+				if ( is_wp_error( $new_post_id ) ) {
+					wp_die( esc_html( $new_post_id->get_error_message() ) );
 				}
+
+				// Redirect to the edit screen for the new post/page.
+				wp_redirect( admin_url( 'edit.php?post_type=' . $post->post_type ) );
+				exit;
 			}
 		}
 	}
@@ -85,7 +63,7 @@ class Hooks {
 	 * @return array Modified list of row actions.
 	 */
 	public function duplicator_post_page_link( $actions, $post ) {
-		if ( in_array( $post->post_type, [ 'post', 'page' ], true ) && current_user_can( 'edit_posts' ) ) {
+		if ( in_array( $post->post_type, Duplicator::get_duplicatable_post_types(), true ) && current_user_can( 'edit_posts' ) ) {
 			$actions['duplicate'] = sprintf(
 				'<a href="%s" title="%s" rel="permalink">%s</a>',
 				esc_url( wp_nonce_url( 'admin.php?action=duplicator_post_page&post=' . $post->ID, 'duplicator_post_page_nonce' ) ),
