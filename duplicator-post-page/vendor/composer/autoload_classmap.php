@@ -7,4 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'DuplicatorPostPage\\Abilities\\AbilitiesCategories' => $baseDir . '/includes/Abilities/AbilitiesCategories.php',
+    'DuplicatorPostPage\\Abilities\\AbilitiesLoader' => $baseDir . '/includes/Abilities/AbilitiesLoader.php',
+    'DuplicatorPostPage\\Abilities\\AbilityDefinition' => $baseDir . '/includes/Abilities/AbilityDefinition.php',
+    'DuplicatorPostPage\\Abilities\\Domain\\DuplicatePost' => $baseDir . '/includes/Abilities/Domain/DuplicatePost.php',
+    'DuplicatorPostPage\\Abilities\\Domain\\ListDuplicatablePosts' => $baseDir . '/includes/Abilities/Domain/ListDuplicatablePosts.php',
+    'DuplicatorPostPage\\Duplicator' => $baseDir . '/includes/Duplicator.php',
+    'DuplicatorPostPage\\Helpers\\Utils' => $baseDir . '/includes/Helpers/Utils.php',
+    'DuplicatorPostPage\\Hooks' => $baseDir . '/includes/Hooks.php',
 );

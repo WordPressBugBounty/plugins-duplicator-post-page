@@ -2,27 +2,42 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Quick Copy – Duplicate Posts & Pages 1.3.0\n"
+"Project-Id-Version: Quick Copy – Duplicate Posts & Pages 1.3.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/duplicator-post-page\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-29T18:44:07+02:00\n"
+"POT-Creation-Date: 2026-10-13T17:37:13+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: duplicator-post-page\n"
 
-#: duplicator-post-page.php:181
+#. Plugin Name of the plugin
+#: duplicator-post-page.php
+msgid "Quick Copy – Duplicate Posts & Pages"
+msgstr ""
+
+#. Description of the plugin
+#: duplicator-post-page.php
+msgid "One-Click Duplicator, Page & Post Copier, Content Duplicator."
+msgstr ""
+
+#. Author of the plugin
+#: duplicator-post-page.php
+msgid "Iqbal Hossain"
+msgstr ""
+
+#: duplicator-post-page.php:222
 msgid "View Video Tutorials"
 msgstr ""
 
-#: duplicator-post-page.php:181
+#: duplicator-post-page.php:222
 msgid "Video Tutorials"
 msgstr ""
 
-#: duplicator-post-page.php:200
+#: duplicator-post-page.php:241
 msgid "Get Pro"
 msgstr ""
 
@@ -39,11 +54,7 @@ msgid "Duplicate Post or Page"
 msgstr ""
 
 #: includes/Abilities/Domain/DuplicatePost.php:51
-msgid ""
-"Creates a copy of an existing post or page, including its content, custom "
-"fields and taxonomy terms. The copy is saved as a draft (never published) "
-"and its ID and edit URL are returned. Use the list-duplicatable-posts "
-"ability first if you only know the title and need the ID."
+msgid "Creates a copy of an existing post or page, including its content, custom fields and taxonomy terms. The copy is saved as a draft (never published) and its ID and edit URL are returned. Use the list-duplicatable-posts ability first if you only know the title and need the ID."
 msgstr ""
 
 #: includes/Abilities/Domain/DuplicatePost.php:59
@@ -51,9 +62,7 @@ msgid "The ID of the post or page to duplicate."
 msgstr ""
 
 #: includes/Abilities/Domain/DuplicatePost.php:63
-msgid ""
-"Optional title for the copy. Defaults to the original title with \" (Copy)\" "
-"appended."
+msgid "Optional title for the copy. Defaults to the original title with \" (Copy)\" appended."
 msgstr ""
 
 #: includes/Abilities/Domain/DuplicatePost.php:69
@@ -93,10 +102,7 @@ msgid "List Duplicatable Posts and Pages"
 msgstr ""
 
 #: includes/Abilities/Domain/ListDuplicatablePosts.php:50
-msgid ""
-"Returns posts and pages the current user is allowed to duplicate, optionally "
-"filtered by a search term or post type. Use this to resolve a title into the "
-"post ID required by the duplicate-post ability."
+msgid "Returns posts and pages the current user is allowed to duplicate, optionally filtered by a search term or post type. Use this to resolve a title into the post ID required by the duplicate-post ability."
 msgstr ""
 
 #: includes/Abilities/Domain/ListDuplicatablePosts.php:57
@@ -104,8 +110,7 @@ msgid "Optional search term matched against the title and content."
 msgstr ""
 
 #: includes/Abilities/Domain/ListDuplicatablePosts.php:61
-msgid ""
-"Optional post type to filter by. Defaults to all duplicatable post types."
+msgid "Optional post type to filter by. Defaults to all duplicatable post types."
 msgstr ""
 
 #: includes/Abilities/Domain/ListDuplicatablePosts.php:68
@@ -146,10 +151,12 @@ msgstr ""
 
 #. translators: %s: post type slug.
 #: includes/Duplicator.php:75
+#, php-format
 msgid "The \"%s\" post type cannot be duplicated."
 msgstr ""
 
-#: includes/Duplicator.php:85 includes/Hooks.php:39
+#: includes/Duplicator.php:85
+#: includes/Hooks.php:39
 msgid "You are not allowed to duplicate this post."
 msgstr ""
 
@@ -171,4 +178,50 @@ msgstr ""
 
 #: includes/Hooks.php:71
 msgid "Duplicate"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Rest/DismissController.php:64
+msgid "Unknown item."
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Sdk.php:186
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Sdk.php:194
+msgid "Invalid request."
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Sdk.php:261
+msgid "Disable WPShark news"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Sdk.php:261
+msgid "Enable WPShark news"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Ui/DashboardWidget.php:33
+msgid "Need Help?"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Ui/DashboardWidget.php:34
+msgid "Blog"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Ui/DashboardWidget.php:35
+msgid "Facebook"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Ui/DashboardWidget.php:36
+msgid "Community"
+msgstr ""
+
+#: libs/wpshark-remote-notices/src/Ui/DashboardWidget.php:69
+msgid "WPShark News"
+msgstr ""
+
+#: libs/wpshark-remote-notices/views/notice.php:44
+#: libs/wpshark-remote-notices/views/story-list.php:23
+#: libs/wpshark-remote-notices/views/story-list.php:38
+msgid "(opens in a new tab)"
 msgstr ""

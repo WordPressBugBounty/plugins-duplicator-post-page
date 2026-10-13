@@ -22,6 +22,14 @@ class ComposerStaticInite6d71f695182a3e50f7811e5d6819e0a
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'DuplicatorPostPage\\Abilities\\AbilitiesCategories' => __DIR__ . '/../..' . '/includes/Abilities/AbilitiesCategories.php',
+        'DuplicatorPostPage\\Abilities\\AbilitiesLoader' => __DIR__ . '/../..' . '/includes/Abilities/AbilitiesLoader.php',
+        'DuplicatorPostPage\\Abilities\\AbilityDefinition' => __DIR__ . '/../..' . '/includes/Abilities/AbilityDefinition.php',
+        'DuplicatorPostPage\\Abilities\\Domain\\DuplicatePost' => __DIR__ . '/../..' . '/includes/Abilities/Domain/DuplicatePost.php',
+        'DuplicatorPostPage\\Abilities\\Domain\\ListDuplicatablePosts' => __DIR__ . '/../..' . '/includes/Abilities/Domain/ListDuplicatablePosts.php',
+        'DuplicatorPostPage\\Duplicator' => __DIR__ . '/../..' . '/includes/Duplicator.php',
+        'DuplicatorPostPage\\Helpers\\Utils' => __DIR__ . '/../..' . '/includes/Helpers/Utils.php',
+        'DuplicatorPostPage\\Hooks' => __DIR__ . '/../..' . '/includes/Hooks.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

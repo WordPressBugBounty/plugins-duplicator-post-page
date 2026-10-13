@@ -4,8 +4,8 @@
  * Plugin Name:       Quick Copy – Duplicate Posts & Pages
  * Description:      One-Click Duplicator, Page & Post Copier, Content Duplicator.
  * Requires at least: 6.1
- * Requires PHP:      7.0
- * Version:           1.3.3
+ * Requires PHP:      7.4
+ * Version:           1.3.4
  * Author:            Iqbal Hossain
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,7 +27,7 @@ final class Duplicator_Post_Page {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.3.3';
+	const VERSION = '1.3.4';
 
 	/**
 	 * Plugin instance.
@@ -84,6 +84,7 @@ final class Duplicator_Post_Page {
 	 */
 	private function register_activation_hooks() {
 		register_activation_hook( __FILE__, [ $this, 'activate' ] );
+		register_deactivation_hook( __FILE__, [ $this, 'deactivate' ] );
 	}
 
 	/**
@@ -91,6 +92,46 @@ final class Duplicator_Post_Page {
 	 */
 	private function includes() {
 		require_once DUPLICATOR_POST_PAGE_PLUGIN_DIR . '/vendor/autoload.php';
+
+		// WPShark news (opt-in). Loaded at file load time because the SDK
+		// elects its highest bundled version early on plugins_loaded.
+		require_once DUPLICATOR_POST_PAGE_PLUGIN_DIR . 'libs/wpshark-remote-notices/loader.php';
+		add_action( 'wpshark_sdk_loaded', [ $this, 'register_remote_notices' ] );
+	}
+
+	/**
+	 * Register Quick Copy with the WPShark Remote Notices SDK.
+	 *
+	 * Quick Copy has no admin screen of its own, so it only takes part in
+	 * the "WPShark News" dashboard widget (no banners on edit.php, which is
+	 * the user's own workflow screen).
+	 *
+	 * @since 1.3.4
+	 */
+	public function register_remote_notices() {
+		\WPShark\RemoteNotices\Sdk::register_product(
+			[
+				'slug'           => 'duplicator-post-page',
+				'name'           => 'Quick Copy',
+				'version'        => self::VERSION,
+				'screens'        => [],
+				'consent_option' => 'duplicator_post_page_remote_notices',
+				'plugin_file'    => __FILE__,
+			]
+		);
+	}
+
+	/**
+	 * Stop the shared WPShark news cron when this was the last WPShark plugin.
+	 *
+	 * @since 1.3.4
+	 */
+	public function deactivate() {
+		if ( ! class_exists( '\WPShark\RemoteNotices\Uninstaller', false ) ) {
+			require_once DUPLICATOR_POST_PAGE_PLUGIN_DIR . 'libs/wpshark-remote-notices/src/Uninstaller.php';
+		}
+
+		\WPShark\RemoteNotices\Uninstaller::on_deactivate( 'duplicator-post-page' );
 	}
 
 	/**
