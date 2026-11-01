@@ -4,7 +4,7 @@ Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,11 +33,10 @@ Whether you're managing a large content library or building websites for clients
 
 ### 🌟 You May Also Like
 
-Looking to build stunning websites **faster with Elementor**?  
-ElementsKit – All-in-One Addons for Elementor — the ultimate toolkit for Elementor users!
+Looking to build stunning websites **faster with Feed**?
 
-🎥 [Watch ElementsKit in Action](https://www.youtube.com/watch?v=NUv30rcgGws)  
-👉 [Upgrade Now](https://wpmet.com/?rui=1237)
+Ohara – Feed Builder For YouTube 
+
 
 ---
 
@@ -58,7 +57,6 @@ ElementsKit – All-in-One Addons for Elementor — the ultimate toolkit for Ele
 * Bricks Builder
 * Oxygen Builder
 * Breakdance Builder
-* GutenKit Page Builder
 * Gutenberg Essential Blocks
 
 ---
