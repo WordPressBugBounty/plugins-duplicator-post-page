@@ -1,14 +1,14 @@
-=== Quick Copy – Duplicate Posts & Pages ===
+=== Quick Copy – Duplicate & Clone Posts & Pages ===
 Contributors: iqbal1hossain
-Tags: copy pages, copy posts, duplicate pages, duplicate post, duplicate posts
+Tags: clone page, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Easily duplicate any post or page, including all metadata and taxonomies, with just one click.
+Easily duplicate or clone any post or page, including all metadata and taxonomies, with just one click.
 
 == Description ==
 
@@ -23,10 +23,32 @@ Whether you're managing a blog, running a website, or developing for clients, th
 * Retain Taxonomies: Categories, tags, and custom taxonomies are also copied along with the content.
 * Quick Access: Easily accessible "Duplicate" link available in the post and page action links within the WordPress admin interface.
 * Draft Status: The duplicated post or page is saved as a draft, allowing you to make further changes before publishing.
+* Clone Post & Clone Page: Clone any post or page in one click and reuse it as a template for new content.
+* Post Duplicator & Page Duplicator: A simple WP duplicator for posts and pages, with no settings to configure.
+* Featured Image & Custom Fields: The featured image, excerpt, custom fields and page builder data are copied too.
+* Keeps Page Structure: Page parent, menu order, comment status and ping status are carried over to the copy.
+* Page Builder Friendly: Clone pages built with Elementor, Gutenberg, Divi, Beaver Builder, Bricks and more.
+* AI Agent Ready: Supports the WordPress Abilities API, so AI agents can duplicate posts and pages (WordPress 6.9+).
+* Lightweight: No extra database tables, no bloat, and no impact on your site's front end.
+
+### 📋 How to Duplicate a Post or Page
+
+1. Go to **Posts > All Posts** or **Pages > All Pages**.
+2. Hover over the post or page you want to copy.
+3. Click **Duplicate**.
+4. A new draft named "Your Title (Copy)" is created. Edit it and publish when ready.
+
+### 💡 Popular Uses
+
+* **Duplicate post** – copy a blog post to use as a starting template for a new article.
+* **Duplicate page** – copy a landing page, sales page or service page layout.
+* **Clone page** – reuse an Elementor or block editor design without rebuilding it.
+* **Clone post** – create several similar posts (products, events, reviews) quickly.
+* **Post page duplicate** – keep a safe backup copy of a post or page before making big edits.
 
 Whether you're managing a large content library or building websites for clients, **Quick Copy** makes duplication simple, efficient, and reliable.
 
-📺 **Watch how it works:**  
+📺 **Watch how it works:**
 [https://www.youtube.com/watch?v=GzBJW-NE1l8](https://www.youtube.com/watch?v=GzBJW-NE1l8)
 
 ---
@@ -35,11 +57,9 @@ Whether you're managing a large content library or building websites for clients
 
 Looking to build stunning websites **faster with Feed**?
 
-Ohara – Feed Builder For YouTube 
-
+Ohara – Feed Builder For YouTube
 
 ---
-
 
 == Compatibility ==
 
@@ -88,6 +108,27 @@ Privacy policy: https://wpshark.xyz/privacy-policy/
 = What happens to the duplicated post or page? =
 The duplicated post or page is saved as a draft with "(Copy)" appended to the title.
 
+= How do I clone a post or page? =
+Hover over the post or page in your Posts or Pages list and click "Duplicate". A copy is saved as a draft.
+
+= How do I duplicate a page in WordPress? =
+Go to Pages > All Pages, hover over the page and click "Duplicate". The new page keeps its content, parent, custom fields and page builder layout.
+
+= How do I duplicate a post in WordPress? =
+Go to Posts > All Posts, hover over the post and click "Duplicate". The new post keeps its categories, tags, featured image and custom fields.
+
+= Can I clone a page built with Elementor or another page builder? =
+Yes. Page builder layouts are stored in custom fields, and Quick Copy copies all custom fields, so the cloned page keeps its design.
+
+= Is the featured image copied? =
+Yes. The featured image is copied to the duplicate along with the other metadata.
+
+= Will a duplicate post or page affect my SEO? =
+No. Duplicates are saved as drafts, so they are not public. Change the title, slug and content before publishing to avoid duplicate content.
+
+= Is this the same as the Duplicator backup plugin? =
+No. Quick Copy duplicates and clones individual posts and pages inside your site. It does not back up or migrate a whole website.
+
 = Can I duplicate custom post types? =
 Currently, the plugin supports duplicating posts and pages. Custom post-type support may be added in future updates.
 
@@ -97,6 +138,10 @@ Yes, the duplicated post or page will retain all metadata and taxonomies associa
 ---
 
 == Changelog ==
+
+= 1.3.5 =
+* Improved: Readme updates with clearer duplicate post, duplicate page, clone post and clone page instructions.
+* Added: New FAQ entries and a "How to Duplicate a Post or Page" guide.
 
 = 1.3.4 =
 * Added: Optional "WPShark News" dashboard widget, off by default. Enable or disable it with the "Enable WPShark news" link on the Plugins screen.
@@ -137,5 +182,5 @@ Yes, the duplicated post or page will retain all metadata and taxonomies associa
 
 == License ==
 
-This plugin is licensed under the **GPLv2 or later**.  
+This plugin is licensed under the **GPLv2 or later**.
 See the [License URI](https://www.gnu.org/licenses/gpl-2.0.html) for more information.
