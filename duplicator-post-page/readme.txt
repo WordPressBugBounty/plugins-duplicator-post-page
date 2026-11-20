@@ -4,7 +4,7 @@ Tags: clone page, copy posts, duplicate pages, duplicate post, duplicate posts
 Requires at least: 6.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,18 +91,6 @@ That’s it — your new copy will be created instantly as a draft!
 
 ---
 
-== External services ==
-
-WPShark news is OFF by default. Nothing is shown and no request is made until an administrator enables it with the "Enable WPShark news" link under the plugin on the Plugins screen (the same link disables it again).
-
-When enabled, a "WPShark News" dashboard widget lists WPShark blog posts and tips, and your site requests https://wpshark.xyz/wp-json/wpshark-hub/v1/feed about every 6 hours. Quick Copy never shows banners or notices from this feed. The request contains no personal data, site URL, or list of plugins; like any web request it reveals your server's IP address to wpshark.xyz. Images shown in the widget are loaded from wpshark.xyz by the administrator's browser.
-
-Service provider: WPShark — https://wpshark.xyz/
-Terms of use: https://wpshark.xyz/terms/
-Privacy policy: https://wpshark.xyz/privacy-policy/
-
----
-
 == Frequently Asked Questions ==
 
 = What happens to the duplicated post or page? =
@@ -144,7 +132,7 @@ Yes, the duplicated post or page will retain all metadata and taxonomies associa
 * Added: New FAQ entries and a "How to Duplicate a Post or Page" guide.
 
 = 1.3.4 =
-* Added: Optional "WPShark News" dashboard widget, off by default. Enable or disable it with the "Enable WPShark news" link on the Plugins screen.
+* Added: Optional "News" dashboard widget, off by default. Enable or disable it with the "Enable news" link on the Plugins screen.
 * Added: Uninstall cleanup of plugin options.
 * Changed: Minimum PHP version is now 7.4.
 
